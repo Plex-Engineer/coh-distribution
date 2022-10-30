@@ -27,7 +27,6 @@ async function main() {
 
     // call distribute
     const distributeFunction = await distribute.distributeUsingTransfer();
-    await distributeFunction;
 
     // check balance of contract after calling distribute 
     const balance2 = await distribute.getBalance();
