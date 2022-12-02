@@ -2,14 +2,14 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/tkkwon/Github/coh-distribution/contracts/distribute.sol": {
-      "lastModificationDate": 1667102007809,
-      "contentHash": "0f8fc3077ffe849d6ce8c2736fd0a6e6",
+      "lastModificationDate": 1669879139846,
+      "contentHash": "952676d954486cdcb327d3b58089e3cc",
       "sourceName": "contracts/distribute.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.11",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {

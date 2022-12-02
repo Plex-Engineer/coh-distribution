@@ -42,12 +42,12 @@ describe("Token contract", function () {
     // send ether to contract
     const transactionHash = await owner.sendTransaction({
         to: hardhatDistribute.address,
-        value: ethers.utils.parseEther("299999.99"), 
+        value: ethers.utils.parseEther("300000.0"), 
     });
 
     // check balance to ensure contract received ether
     const balance = await hardhatDistribute.getBalance();
-    expect(balance).to.equal(ethers.utils.parseEther("299999.99"));
+    expect(balance).to.equal(ethers.utils.parseEther("300000.0"));
 
     // call distribute function on contract
     const distributeFunction = await hardhatDistribute.distributeUsingTransfer();
@@ -57,29 +57,23 @@ describe("Token contract", function () {
     expect(balance2).to.equal(ethers.utils.parseEther("0.0"));
 
     // check balances of addresses to ensure ether was delivered
-    const longnecksBalance = await ethers.provider.getBalance("0x0189402Fa964da3f5C59C81aF192CD4b2a29973B");
-    expect(longnecksBalance).to.equal(ethers.utils.parseEther("100000.0"));
+    const cantoMessengerBalance = await ethers.provider.getBalance("0x61720DAF21641487e7CC3C71dd3583b8cE2B8d0A");
+    expect(cantoMessengerBalance).to.equal(ethers.utils.parseEther("100000.0"));
 
-    const cnsBalance = await ethers.provider.getBalance("0x2bE8F7A8EfF738aFCD688Af4D3DD314164065760");
-    expect(cnsBalance).to.equal(ethers.utils.parseEther("40000.0"));
+    const bambooBalance = await ethers.provider.getBalance("0xCA0Ef5A0AC9323E7f9ba5D417F9Bb173470B495C");
+    expect(bambooBalance).to.equal(ethers.utils.parseEther("40000.0"));
 
-    const cantoswapBalance = await ethers.provider.getBalance("0xF39eEe4F21359e78A30D992e0b2D7fEAAe5c97Ff");
-    expect(cantoswapBalance).to.equal(ethers.utils.parseEther("40000.0"));
+    const cantoToolsBalance = await ethers.provider.getBalance("0xeDa724Ad752BDa46117a4Fb0558D537910fC71f3");
+    expect(cantoToolsBalance).to.equal(ethers.utils.parseEther("40000.0"));
 
-    const magnetBalance = await ethers.provider.getBalance("0x6dC370451ad0C5a6Bcb4F1618BbbbfF1DC40b42a");
-    expect(magnetBalance).to.equal(ethers.utils.parseEther("40000.0"));
+    const cantillionairesBalance = await ethers.provider.getBalance("0x9e884f11F96b0dd527a6e267B344927338acE6d9");
+    expect(cantillionairesBalance).to.equal(ethers.utils.parseEther("40000.0"));
 
-    const kantoBalance = await ethers.provider.getBalance("0x2e2407BF0220c2EB7D1F180A8eF43A8cC7939E4B");
-    expect(kantoBalance).to.equal(ethers.utils.parseEther("40000.0"));
+    const cantoShBalance = await ethers.provider.getBalance("0x264217b2B74C1B3d85c199226c93Dd341377443c");
+    expect(cantoShBalance).to.equal(ethers.utils.parseEther("40000.0"));
 
-    const promptBalance = await ethers.provider.getBalance("0x810be8A5C6b6b38A7c1530F9E0b81f47CEF92b25");
-    expect(promptBalance).to.equal(ethers.utils.parseEther("13333.33"));
-
-    const thothBalance = await ethers.provider.getBalance("0xA779fC675Db318dab004Ab8D538CB320D0013F42");
-    expect(thothBalance).to.equal(ethers.utils.parseEther("13333.33"));
-
-    const y2rBalance = await ethers.provider.getBalance("0x73d9312A7C47a25C18E27E94160034ac7AE99576");
-    expect(y2rBalance).to.equal(ethers.utils.parseEther("13333.33"));
+    const carbonBalance = await ethers.provider.getBalance("0x2e2407BF0220c2EB7D1F180A8eF43A8cC7939E4B");
+    expect(carbonBalance).to.equal(ethers.utils.parseEther("40000.0"));
   });
 
   it("Call distribute using call on the contract", async function () { 
@@ -88,12 +82,12 @@ describe("Token contract", function () {
     // send ether to contract
     const transactionHash = await owner.sendTransaction({
         to: hardhatDistribute.address,
-        value: ethers.utils.parseEther("299999.99"), // Sends exactly 1.0 ether
+        value: ethers.utils.parseEther("300000.0"), // Sends exactly 1.0 ether
     });
 
     // check balance to ensure contract received ether
     const balance = await hardhatDistribute.getBalance();
-    expect(balance).to.equal(ethers.utils.parseEther("299999.99"));
+    expect(balance).to.equal(ethers.utils.parseEther("300000.0"));
 
     // call distribute function on contract
     const distributeFunction = await hardhatDistribute.distributeUsingCall();
@@ -103,28 +97,22 @@ describe("Token contract", function () {
     expect(balance2).to.equal(ethers.utils.parseEther("0.0"));
 
      // check balances of addresses to ensure ether was delivered
-     const longnecksBalance = await ethers.provider.getBalance("0x0189402Fa964da3f5C59C81aF192CD4b2a29973B");
-     expect(longnecksBalance).to.equal(ethers.utils.parseEther("100000.0"));
+     const cantoMessengerBalance = await ethers.provider.getBalance("0x61720DAF21641487e7CC3C71dd3583b8cE2B8d0A");
+     expect(cantoMessengerBalance).to.equal(ethers.utils.parseEther("100000.0"));
  
-     const cnsBalance = await ethers.provider.getBalance("0x2bE8F7A8EfF738aFCD688Af4D3DD314164065760");
-     expect(cnsBalance).to.equal(ethers.utils.parseEther("40000.0"));
+     const bambooBalance = await ethers.provider.getBalance("0xCA0Ef5A0AC9323E7f9ba5D417F9Bb173470B495C");
+     expect(bambooBalance).to.equal(ethers.utils.parseEther("40000.0"));
  
-     const cantoswapBalance = await ethers.provider.getBalance("0xF39eEe4F21359e78A30D992e0b2D7fEAAe5c97Ff");
-     expect(cantoswapBalance).to.equal(ethers.utils.parseEther("40000.0"));
+     const cantoToolsBalance = await ethers.provider.getBalance("0xeDa724Ad752BDa46117a4Fb0558D537910fC71f3");
+     expect(cantoToolsBalance).to.equal(ethers.utils.parseEther("40000.0"));
  
-     const magnetBalance = await ethers.provider.getBalance("0x6dC370451ad0C5a6Bcb4F1618BbbbfF1DC40b42a");
-     expect(magnetBalance).to.equal(ethers.utils.parseEther("40000.0"));
+     const cantillionairesBalance = await ethers.provider.getBalance("0x9e884f11F96b0dd527a6e267B344927338acE6d9");
+     expect(cantillionairesBalance).to.equal(ethers.utils.parseEther("40000.0"));
  
-     const kantoBalance = await ethers.provider.getBalance("0x2e2407BF0220c2EB7D1F180A8eF43A8cC7939E4B");
-     expect(kantoBalance).to.equal(ethers.utils.parseEther("40000.0"));
+     const cantoShBalance = await ethers.provider.getBalance("0x264217b2B74C1B3d85c199226c93Dd341377443c");
+     expect(cantoShBalance).to.equal(ethers.utils.parseEther("40000.0"));
  
-     const promptBalance = await ethers.provider.getBalance("0x810be8A5C6b6b38A7c1530F9E0b81f47CEF92b25");
-     expect(promptBalance).to.equal(ethers.utils.parseEther("13333.33"));
- 
-     const thothBalance = await ethers.provider.getBalance("0xA779fC675Db318dab004Ab8D538CB320D0013F42");
-     expect(thothBalance).to.equal(ethers.utils.parseEther("13333.33"));
- 
-     const y2rBalance = await ethers.provider.getBalance("0x73d9312A7C47a25C18E27E94160034ac7AE99576");
-     expect(y2rBalance).to.equal(ethers.utils.parseEther("13333.33"));
+     const carbonBalance = await ethers.provider.getBalance("0x2e2407BF0220c2EB7D1F180A8eF43A8cC7939E4B");
+     expect(carbonBalance).to.equal(ethers.utils.parseEther("40000.0"));
   });
 });
